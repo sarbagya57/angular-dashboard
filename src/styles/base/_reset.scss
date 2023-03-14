@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $primary-color;
+  font-family: $inter-serif;
+  font-size: 14px;
+  font-weight: $normal;
+  line-height: 20px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.final {
+  font-weight: $semiBold;
+  color: black;
+  padding: 12px 0px 12px 8px;
+}
+
+.text-danger {
+  color: $red;
+}

@@ -1,0 +1,90 @@
+<div class="main__form-model">
+  <div class="main__form-wrapper">
+    <form class="form">
+      <h2 class="form__text">Edit Employee Details</h2>
+      <div class="input-group">
+        <label class="input-group__label">Employee Name: </label>
+        <input
+          type="text"
+          name="employeeName"
+          class="input-group__input"
+          [(ngModel)]="employeeDetails.employeeName"
+        />
+        <span id="validEmployeeName" class="text-danger"> </span>
+      </div>
+      <div class="input-group">
+        <label class="input-group__label">Country:</label>
+        <input
+          type="text"
+          name="country"
+          id="country"
+          class="input-group__input"
+          [(ngModel)]="employeeDetails.country"
+        />
+        <span id="validCountry" class="text-danger"> </span>
+      </div>
+      <div class="input-group">
+        <label class="input-group__label">Employee Type:</label>
+        <input
+          type="text"
+          name="type"
+          id="type"
+          class="input-group__input"
+          [(ngModel)]="employeeDetails.type"
+        />
+        <span id="validType" class="text-danger"> </span>
+      </div>
+      <div class="input-group">
+        <label class="input-group__label">Paid Days:</label>
+        <input
+          type="number"
+          name="paidDays"
+          id="paidDays"
+          class="input-group__input"
+          [(ngModel)]="employeeDetails.paidDays"
+        />
+        <span id="validPaidDays" class="text-danger"> </span>
+      </div>
+      <div class="input-group">
+        <label class="input-group__label">Time Off:</label>
+        <input
+          type="number"
+          name="timeOff"
+          id="timeOff"
+          class="input-group__input"
+          [(ngModel)]="employeeDetails.timeOff"
+        />
+        <span id="validTimeOff" class="text-danger"> </span>
+      </div>
+      <div class="input-group">
+        <label class="input-group__label">Net Pay:</label>
+        <input
+          type="number"
+          name="netPay"
+          id="netPay"
+          class="input-group__input"
+          [(ngModel)]="employeeDetails.netPay"
+        />
+        <span id="validNetPay" class="text-danger"> </span>
+      </div>
+      <div class="btn-grp">
+        <button
+          type="button"
+          class="btn-grp btn-grp__update"
+          id="Update"
+          (click)="updateData()"
+        >
+          Update
+        </button>
+        <button
+          type="button"
+          class="btn-grp btn-grp__danger"
+          id="Close"
+          routerLink="/home"
+        >
+          Close
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

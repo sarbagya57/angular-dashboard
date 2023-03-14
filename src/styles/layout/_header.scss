@@ -1,0 +1,17 @@
+/* Header CSS */
+
+.header {
+  position: fixed;
+  right: 0;
+  left: 312px;
+  top: 0;
+  padding: 24px;
+  background: $primary-color;
+  z-index: 2;
+
+  &__content {
+    @include centerItems();
+    justify-content: flex-end;
+    gap: 33px;
+  }
+}

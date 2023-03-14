@@ -1,0 +1,68 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__text {
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+.input-group {
+  @include flexColumn;
+
+  &__input[type="text"],
+  &__input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    background: $primary-color;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: $normal;
+  }
+
+  span {
+    padding-top: 5px;
+  }
+}
+
+.btn-grp {
+  @include centerItems;
+  justify-content: center;
+
+  min-width: 130px;
+  min-height: 30px;
+  color: $light-color;
+  border: 1px solid $cream;
+  border-radius: 7px;
+  gap: 20px;
+  border: none;
+
+  &__success {
+    justify-content: center;
+    cursor: pointer;
+    background: $green;
+  }
+
+  &__danger {
+    justify-content: center;
+    cursor: pointer;
+    background: $red;
+  }
+
+  &__update {
+    justify-content: center;
+    cursor: pointer;
+    background: $blue-text;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

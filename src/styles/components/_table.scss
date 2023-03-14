@@ -1,0 +1,50 @@
+.table {
+  font-size: 14px;
+  min-width: 100%;
+  overflow: scroll;
+  background: $light-color;
+  border-spacing: 0;
+
+  &__head {
+    color: $light-grey;
+    background: $primary-color;
+    font-weight: $semiBold;
+    font-size: 12px;
+  }
+
+  &__row {
+    text-align: left;
+  }
+
+  &__row th {
+    padding: 10px;
+  }
+
+  &__body {
+    color: #5f5f61;
+  }
+
+  &__data {
+    border-bottom: 1px solid $primary-color;
+    padding-left: 8px;
+    cursor: pointer;
+    width: 200px;
+  }
+
+  &__column {
+    align-items: flex-start;
+    padding: 12px 24px 12px 0px;
+  }
+
+  &__name {
+    text-align: left;
+    font-weight: $semiBold;
+    padding-bottom: 4px;
+  }
+
+  &__details {
+    @include centerItems();
+    color: $grey-text;
+    gap: 8px;
+  }
+}

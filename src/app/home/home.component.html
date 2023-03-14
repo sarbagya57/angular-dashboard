@@ -1,0 +1,77 @@
+<div class="main__header">
+  <div class="content">
+    <h3 class="content__title">Payroll</h3>
+    <div class="content__date">
+      <p>July 01 - July 31</p>
+      <img src="/assets/info-icon.png" alt="info-icon" />
+    </div>
+  </div>
+  <button type="button" class="btn btn-add" [routerLink]="['add']">
+    <img src="/assets/add-icon.png" alt="add-icon" />
+    Add candidate
+  </button>
+</div>
+<div class="main__desc">
+  <h3 class="main__desc--title">Summary for this month payroll</h3>
+  <p class="main__desc--text">
+    See the total hours work and annual leave taken for each employee.
+  </p>
+</div>
+<table class="table" id="employeeList">
+  <thead class="table__head">
+    <tr class="table__row">
+      <th>EMPLOYEE</th>
+      <th>EMPLOYEE TYPE</th>
+      <th>PAID DAYS</th>
+      <th>TIME OFF</th>
+      <th>NET PAY</th>
+      <th class="text-center">ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__row" *ngFor="let employee of employees">
+      <td class="table__data">
+        <div class="table__column">
+          <h4 class="table__name">{{ employee.employeeName }}</h4>
+          <div class="table__details">
+            <img src="/assets/country-icon.png" />
+            <span> {{ employee.country }} </span>
+          </div>
+        </div>
+      </td>
+      <td class="table__data">{{ employee.type }}</td>
+      <td class="table__data">{{ employee.paidDays }} Days</td>
+      <td class="table__data">{{ employee.timeOff }} Days</td>
+      <td class="table__data">$ {{ employee.netPay }}</td>
+      <td class="table__data">
+        <div class="table-btn">
+          <a [routerLink]="['update', employee.employeeID]" class="btn">
+            <img src="/assets/edit-icon.png" alt="edit-icon" />
+          </a>
+          <button (click)="deleteData(employee.employeeID)" class="btn">
+            <img src="/assets/delete-icon.png" alt="del-icon" />
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr class="table__row">
+      <td class="table__data final">Total</td>
+      <td class="table__data final"></td>
+      <td class="table__data final" id="footer-paid">
+        {{ totalPaidDays }} Days
+      </td>
+      <td class="table__data final" id="footer-timeOff">
+        {{ totalTimeOff }} Days
+      </td>
+      <td class="table__data final" id="footer-total">$ {{ totalNetPay }}</td>
+      <td class="table__data final"></td>
+    </tr>
+  </tfoot>
+</table>
+<div class="main__footer text-right">
+  <h2 class="main__footer--text" id="total">$ {{ totalNetPay }}</h2>
+  <p>Total payroll</p>
+</div>
+<button type="submit" class="btn btn-primary">Run payroll</button>

@@ -1,0 +1,31 @@
+/* Sidebar-menus */
+.menu {
+  color: $grey-text;
+
+  &__heading {
+    font-size: 10px;
+    padding: 0px 0px 6px 12px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    @include centerItems();
+    font-size: 14px;
+    color: $grey-text;
+    padding: 10px;
+    text-decoration: none;
+    gap: 10px;
+  }
+
+  &__link:hover {
+    background: $hover-box;
+  }
+
+  &__link:hover span {
+    color: $blue-text;
+    transition: 0.5s;
+  }
+}

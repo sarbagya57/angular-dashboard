@@ -1,0 +1,27 @@
+.sidebar {
+  min-width: 312px;
+  min-height: 100vh;
+  position: fixed;
+  bottom: 0;
+  background: $primary-color;
+
+  &__content {
+    position: absolute;
+    min-width: 312px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 24px 16px;
+    gap: 30px;
+  }
+
+  &__logo {
+    min-width: 114px;
+    min-height: 32px;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+}

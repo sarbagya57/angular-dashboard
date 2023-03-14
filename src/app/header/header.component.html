@@ -1,0 +1,28 @@
+<!--Header-->
+
+<header class="header">
+  <div class="header__content">
+    <form class="search">
+      <div class="search__container">
+        <img src="/assets/search-icon.png" alt="search-icon" />
+        <input
+          type="text"
+          placeholder="Search"
+          (keypress)="onInputKeypress($event)"
+        />
+      </div>
+      <button type="submit" class="btn btn--secondary">
+        <img src="/assets/A.png" alt="A" />
+      </button>
+    </form>
+    <div class="user">
+      <div class="user__avatar">
+        <img src="/assets/avatar.png" alt="avatar-icon" />
+      </div>
+      <div class="user__info">
+        <h4 class="name">{{ userDetails?.name }}</h4>
+        <span class="email"> {{ userDetails?.email }}</span>
+      </div>
+    </div>
+  </div>
+</header>
